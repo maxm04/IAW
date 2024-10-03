@@ -1,0 +1,46 @@
+# mkdocs.yml
+site_name: IMPLANTACIÓN APLICACIONES WEB 2ASIX
+site_description: "Una colección de mis trabajos IAW"
+site_url: "https://maxm04.github.io/IAW/"  # Cambia esto por tu URL
+repo_url: "https://github.com/maxm04/IAW"  # Enlace a tu repositorio
+
+# Tema Material for MkDocs
+theme:
+  name: material
+  logo: images/logoiaw.png
+  palette:
+    primary: 'teal'         # Verde azulado (00796b)
+    accent: 'red'           # Rojo para acentos (d32f2f)
+  icon:
+    annotation: material/arrow-right-circle-outline  
+  font:
+    text: 'Roboto'          # Fuente del texto
+    code: 'Roboto Mono'     # Fuente del código
+  #custom_dir: "overrides"  # Para archivos CSS personalizados si es necesario
+  language: "es"
+  features:
+    - navigation.instant  # Carga rápida de la navegación
+    - navigation.sections  # Secciones plegables en la navegación
+    - navigation.tabs  # Navegación en formato de pestañas
+    - navigation.top  # Barra de navegación fija en la parte superior
+
+# Barra de navegación
+nav:
+  - IAW 2024-2025: index.md
+  - Unidad 1 - Introducción:
+      - Práctica 1 - Git Trabajando con ramas y uniones: Unidad1/practica1-1.md
+      - Práctica 2 - Pull Request: Unidad1/practica1-2.md
+      - Práctica 3.- Despliegue de una página estática con MkDocs: Unidad1/practica1-3.md
+  - Unidad 2: ...md
+
+# Extensiones de Markdown
+markdown_extensions:
+  - admonition  # Para bloques de advertencia, nota, etc.
+  - toc:
+      permalink: true  # Tabla de contenido con enlaces
+  - pymdownx.highlight  # Resaltado de código
+  - pymdownx.superfences  # Cercas de código mejoradas
+  - footnotes  # Notas al pie
+
+# Carpeta de documentos y páginas
+docs_dir: "docs"
