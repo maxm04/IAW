@@ -41,6 +41,8 @@ markdown_extensions:
   - pymdownx.highlight  # Resaltado de código
   - pymdownx.superfences  # Cercas de código mejoradas
   - footnotes  # Notas al pie
+  - tasklist
+  - tables
 
 # Carpeta de documentos y páginas
 docs_dir: "docs"
