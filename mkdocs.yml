@@ -30,8 +30,9 @@ nav:
   - Unidad 1 - Introducción:
       - Práctica 1 - Git Trabajando con ramas y uniones: Unidad1/practica1-1.md
       - Práctica 2 - Pull Request: Unidad1/practica1-2.md
-      - Práctica 3.- Despliegue de una página estática con MkDocs: Unidad1/practica1-3.md
-  - Unidad 2: ...md
+      - Práctica 3 - Despliegue de una página estática con MkDocs: Unidad1/practica1-3.md    
+  - Unidad 2 - Implantación web PHP:
+      - Práctica 1: Unidad2/practica1.md
 
 # Extensiones de Markdown
 markdown_extensions:
@@ -41,7 +42,6 @@ markdown_extensions:
   - pymdownx.highlight  # Resaltado de código
   - pymdownx.superfences  # Cercas de código mejoradas
   - footnotes  # Notas al pie
-  - tasklist
   - tables
 
 # Carpeta de documentos y páginas
