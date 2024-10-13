@@ -32,7 +32,8 @@ nav:
       - Práctica 2 - Pull Request: Unidad1/practica1-2.md
       - Práctica 3 - Despliegue de una página estática con MkDocs: Unidad1/practica1-3.md    
   - Unidad 2 - Implantación web PHP:
-      - Práctica 1: Unidad2/practica1.md
+      - Práctica 1 - Implantación Web Estática Apache: Unidad2/practica1.md
+      - Práctica 2 - Certificado SSL/TLS: Unidad2/practica2.md
 
 # Extensiones de Markdown
 markdown_extensions:
