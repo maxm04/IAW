@@ -22,7 +22,9 @@ theme:
     - navigation.instant  # Carga rápida de la navegación
     - navigation.sections  # Secciones plegables en la navegación
     - navigation.tabs  # Navegación en formato de pestañas
-    - navigation.top  # Barra de navegación fija en la parte superior
+    - navigation.top  # Barra de navegación fija en la parte superior  
+    - toc.integrate         # Añade la tabla de contenido a la barra de navegación
+    - content.code.copy     # Habilita el botón para copiar código
 
 # Barra de navegación
 nav:
@@ -44,6 +46,7 @@ markdown_extensions:
   - pymdownx.superfences  # Cercas de código mejoradas
   - footnotes  # Notas al pie
   - tables
+  
 
 # Carpeta de documentos y páginas
 docs_dir: "docs"
