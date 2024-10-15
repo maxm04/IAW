@@ -36,6 +36,7 @@ nav:
   - Unidad 2 - Implantación web PHP:
       - Práctica 1 - Implantación Web Estática Apache: Unidad2/practica1.md
       - Práctica 2 - Certificado SSL/TLS: Unidad2/practica2.md
+      - Práctica 3 - Instalar, Configurar y Securizar phpMyAdmin: Unidad2/practica3.md
 
 # Extensiones de Markdown
 markdown_extensions:

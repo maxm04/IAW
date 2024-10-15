@@ -1,4 +1,4 @@
-# Práctica 2. Certificado SSL/TLS
+# 📘Práctica 2. Certificado SSL/TLS
 !!! note "Objetivos"
     - Crear un certificado SSL/TLS autofirmado con la herramienta openssl.
     - Configurar el servidor web Apache para que utilice el certificado SSL/TLS autofirmado.
