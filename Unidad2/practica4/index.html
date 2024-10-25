@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://maxm04.github.io/IAW/Unidad2/practica3/">
+        <link rel="canonical" href="https://maxm04.github.io/IAW/Unidad2/practica4/">
       
       
-        <link rel="prev" href="../practica2/">
+        <link rel="prev" href="../practica3/">
       
       
-        <link rel="next" href="../practica4/">
+        <link rel="next" href="../practica5/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Práctica 3 - Instalar, Configurar y Securizar phpMyAdmin - IMPLANTACIÓN APLICACIONES WEB 2ASIX</title>
+        <title>Práctica 4 - Instalar y configurar WordPress - IMPLANTACIÓN APLICACIONES WEB 2ASIX</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#practica-3instalar-configurar-y-securizar-phpmyadmin" class="md-skip">
+        <a href="#practica-4instalar-y-configurar-wordpress" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Práctica 3 - Instalar, Configurar y Securizar phpMyAdmin
+              Práctica 4 - Instalar y configurar WordPress
             
           </span>
         </div>
@@ -511,6 +511,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 3 - Instalar, Configurar y Securizar phpMyAdmin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -527,7 +548,7 @@
           
   
   <span class="md-ellipsis">
-    Práctica 3 - Instalar, Configurar y Securizar phpMyAdmin
+    Práctica 4 - Instalar y configurar WordPress
   </span>
   
 
@@ -538,7 +559,7 @@
         
   
   <span class="md-ellipsis">
-    Práctica 3 - Instalar, Configurar y Securizar phpMyAdmin
+    Práctica 4 - Instalar y configurar WordPress
   </span>
   
 
@@ -560,55 +581,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#instalar-php" class="md-nav__link">
+  <a href="#instalacion-de-dependencias" class="md-nav__link">
     <span class="md-ellipsis">
-      Instalar PHP
+      Instalación de Dependencias
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#instalacion-de-phpmyadmin" class="md-nav__link">
+  <a href="#instalacion-de-wordpress" class="md-nav__link">
     <span class="md-ellipsis">
-      Instalación de phpMyAdmin
+      Instalación de WordPress
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Instalación de phpMyAdmin">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-de-apache-para-wordpress" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración de Apache para WordPress
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#habilitar-el-sitio-y-modulos-de-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      Habilitar el Sitio y Módulos de Apache
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-de-la-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración de la Base de Datos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuración de la Base de Datos">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configurar-phpmyadmin-para-apache" class="md-nav__link">
+  <a href="#crear-la-base-de-datos-y-el-usuario-en-mysql" class="md-nav__link">
     <span class="md-ellipsis">
-      Configurar phpMyAdmin para Apache
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#habilitar-el-archivo-de-configuracion-de-phpmyadmin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Habilitar el archivo de configuración de phpMyAdmin
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#habilitar-la-extension-mbstring-y-reiniciar-apache" class="md-nav__link">
-    <span class="md-ellipsis">
-      Habilitar la extensión mbstring y reiniciar Apache
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configurar-la-base-de-datos-para-phpmyadmin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar la base de datos para phpMyAdmin
+      Crear la Base de Datos y el Usuario en MySQL
     </span>
   </a>
   
@@ -620,36 +641,42 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracion-del-acceso-por-contrasena-para-la-cuenta-root-de-mysql" class="md-nav__link">
+  <a href="#conexion-de-wordpress-con-la-base-de-datos" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuración del Acceso por Contraseña para la Cuenta Root de MySQL
+      Conexión de WordPress con la Base de Datos
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracion-del-acceso-por-contrasena-para-un-usuario-dedicado-de-mysql" class="md-nav__link">
+  <a href="#configuracion-final-de-wordpress" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuración del Acceso por Contraseña para un Usuario Dedicado de MySQL
+      Configuración Final de WordPress
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuración Final de WordPress">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acceder-al-instalador-de-wordpress" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acceder al Instalador de WordPress
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#securizando-instancia-de-phpmyadmin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Securizando Instancia de phpMyAdmin
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#comprobaciones" class="md-nav__link">
+  <a href="#publicar-primer-post" class="md-nav__link">
     <span class="md-ellipsis">
-      Comprobaciones
+      Publicar Primer Post
     </span>
   </a>
   
@@ -659,27 +686,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../practica4/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Práctica 4 - Instalar y configurar WordPress
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -731,129 +737,85 @@
   
 
 
-<h1 id="practica-3instalar-configurar-y-securizar-phpmyadmin">📘Práctica 3.Instalar, configurar y securizar phpMyAdmin<a class="headerlink" href="#practica-3instalar-configurar-y-securizar-phpmyadmin" title="Permanent link">&para;</a></h1>
+<h1 id="practica-4instalar-y-configurar-wordpress">📘Práctica 4.Instalar y configurar WordPress<a class="headerlink" href="#practica-4instalar-y-configurar-wordpress" title="Permanent link">&para;</a></h1>
+<p>En esta práctica, instalaremos WordPress en un servidor Apache2 y configuraremos una base de datos MySQL en una arquitectura LAMP de dos niveles.</p>
 <div class="admonition note">
 <p class="admonition-title">Objetivos</p>
 <ul>
-<li>Instalar, asegurar y configurar phpMyAdmin en un servidor Ubuntu</li>
-<li>Proteger PhpMyAdmin contra accesos no autorizados</li>
-<li>Automatizar la instalación y configuración de phpMyAdmin mediante scripts de Bash</li>
+<li>Instalar Apache y PHP.</li>
+<li>Instalar WordPress.</li>
+<li>Configurar Apache para WordPress.</li>
+<li>Configurar la base de datos MySQL.</li>
+<li>Implementar la aplicación en arquitectura de dos niveles.</li>
 </ul>
 </div>
-<h2 id="instalar-php">Instalar PHP<a class="headerlink" href="#instalar-php" title="Permanent link">&para;</a></h2>
-<p>Instalar PHP para que luego se pueda ejecutar bien el phpmyadmin:
-     <div class="highlight"><pre><span></span><code><span class="w">   </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>php<span class="w"> </span>libapache2-mod-php
+<h2 id="instalacion-de-dependencias">Instalación de Dependencias<a class="headerlink" href="#instalacion-de-dependencias" title="Permanent link">&para;</a></h2>
+<p>Actualizar los Paquetes e Instalar Apache y PHP</p>
+<div class="highlight"><pre><span></span><code>    sudo apt update
+    sudo apt install apache2 ghostscript libapache2-mod-php php php-bcmath php-curl php-imagick php-intl php-json php-mbstring php-mysql php-xml php-zipl
+</code></pre></div>
+<p>Este comando actualiza los paquetes e instala Apache junto con PHP y las extensiones necesarias para WordPress.</p>
+<h2 id="instalacion-de-wordpress">Instalación de WordPress<a class="headerlink" href="#instalacion-de-wordpress" title="Permanent link">&para;</a></h2>
+<p>Descargamos y descomprimimos WordPress en el directorio web del servidor.
+        <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/srv/www
+sudo<span class="w"> </span>chown<span class="w"> </span>www-data:<span class="w"> </span>/srv/www
+curl<span class="w"> </span>https://wordpress.org/latest.tar.gz<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>-u<span class="w"> </span>www-data<span class="w"> </span>tar<span class="w"> </span>zx<span class="w"> </span>-C<span class="w"> </span>/srv/www
 </code></pre></div></p>
-<h2 id="instalacion-de-phpmyadmin">Instalación de phpMyAdmin<a class="headerlink" href="#instalacion-de-phpmyadmin" title="Permanent link">&para;</a></h2>
-<p>Abre tu terminal y ejecuta el siguiente comando para instalar phpMyAdmin
-     <div class="highlight"><pre><span></span><code><span class="w">   </span>sudo<span class="w"> </span>apt<span class="w"> </span>update
-<span class="w">   </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>phpmyadmin<span class="w"> </span>php-mbstring<span class="w"> </span>php-zip<span class="w"> </span>php-gd<span class="w"> </span>php-json<span class="w"> </span>php-curl
+<h2 id="configuracion-de-apache-para-wordpress">Configuración de Apache para WordPress<a class="headerlink" href="#configuracion-de-apache-para-wordpress" title="Permanent link">&para;</a></h2>
+<p>Creamos un archivo de configuración para el sitio de WordPress.
+        <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/apache2/sites-available/wordpress.conf
+</code></pre></div>
+Contenido a añadir:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;VirtualHost</span><span class="w"> </span><span class="s">*:80</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nb">DocumentRoot</span><span class="w"> </span><span class="sx">/srv/www/wordpress</span>
+<span class="w">    </span><span class="nt">&lt;Directory</span><span class="w"> </span><span class="s">/srv/www/wordpress</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nb">Options</span><span class="w"> </span>FollowSymLinks
+<span class="w">        </span><span class="nb">AllowOverride</span><span class="w"> </span>Limit<span class="w"> </span>Options<span class="w"> </span>FileInfo
+<span class="w">        </span><span class="nb">DirectoryIndex</span><span class="w"> </span>index.php
+<span class="w">        </span><span class="nb">Require</span><span class="w"> </span><span class="k">all</span><span class="w"> </span>granted
+<span class="w">    </span><span class="nt">&lt;/Directory&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Directory</span><span class="w"> </span><span class="s">/srv/www/wordpress/wp-content</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nb">Options</span><span class="w"> </span>FollowSymLinks
+<span class="w">        </span><span class="nb">Require</span><span class="w"> </span><span class="k">all</span><span class="w"> </span>granted
+<span class="w">    </span><span class="nt">&lt;/Directory&gt;</span>
+<span class="nt">&lt;/VirtualHost&gt;</span>
+</code></pre></div>
+<h2 id="habilitar-el-sitio-y-modulos-de-apache">Habilitar el Sitio y Módulos de Apache<a class="headerlink" href="#habilitar-el-sitio-y-modulos-de-apache" title="Permanent link">&para;</a></h2>
+<p>Estos comandos habilitan la configuración del sitio de WordPress y activan los módulos necesarios para que funcione correctamente.
+    <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2ensite<span class="w"> </span>wordpress
+sudo<span class="w"> </span>a2enmod<span class="w"> </span>rewrite
+sudo<span class="w"> </span>a2dissite<span class="w"> </span><span class="m">000</span>-default
+sudo<span class="w"> </span>service<span class="w"> </span>apache2<span class="w"> </span>reload
 </code></pre></div></p>
-<h3 id="configurar-phpmyadmin-para-apache">Configurar phpMyAdmin para Apache<a class="headerlink" href="#configurar-phpmyadmin-para-apache" title="Permanent link">&para;</a></h3>
-<p>Durante la instalación se te pedirá que elijas el servidor web.</p>
+<h2 id="configuracion-de-la-base-de-datos">Configuración de la Base de Datos<a class="headerlink" href="#configuracion-de-la-base-de-datos" title="Permanent link">&para;</a></h2>
+<h3 id="crear-la-base-de-datos-y-el-usuario-en-mysql">Crear la Base de Datos y el Usuario en MySQL<a class="headerlink" href="#crear-la-base-de-datos-y-el-usuario-en-mysql" title="Permanent link">&para;</a></h3>
+<p>Abrir MySQL y crear la base de datos:
+    <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mysql<span class="w"> </span>-u<span class="w"> </span>root
+</code></pre></div></p>
+<p>Ejecutar los siguientes comandos dentro de MySQL:
+    <div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">wordpress</span><span class="p">;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">wordpress</span><span class="o">@</span><span class="n">localhost</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;tu-contraseña&#39;</span><span class="p">;</span>
+<span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">wordpress</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">wordpress</span><span class="o">@</span><span class="n">localhost</span><span class="p">;</span>
+<span class="n">FLUSH</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="p">;</span>
+<span class="n">quit</span><span class="p">;</span>
+</code></pre></div></p>
+<h2 id="conexion-de-wordpress-con-la-base-de-datos">Conexión de WordPress con la Base de Datos<a class="headerlink" href="#conexion-de-wordpress-con-la-base-de-datos" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Seleccionar <code>Apache</code></li>
-</ul>
-<p><img alt="Seleccionar Servidor Web" src="../image-31.png" /></p>
-<h3 id="habilitar-el-archivo-de-configuracion-de-phpmyadmin">Habilitar el archivo de configuración de phpMyAdmin<a class="headerlink" href="#habilitar-el-archivo-de-configuracion-de-phpmyadmin" title="Permanent link">&para;</a></h3>
-<p>Ejecuta el siguiente comando para habilitar el archivo.
-    <div class="highlight"><pre><span></span><code><span class="w">    </span>sudo<span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>/etc/phpmyadmin/apache.conf<span class="w"> </span>/etc/apache2/conf-available/phpmyadmin.conf
-<span class="w">    </span>sudo<span class="w"> </span>a2enconf<span class="w"> </span>phpmyadmin
-</code></pre></div></p>
-<p><img alt="Habilitando archivo conf PHP" src="../image-34.png" /></p>
-<h3 id="habilitar-la-extension-mbstring-y-reiniciar-apache">Habilitar la extensión mbstring y reiniciar Apache<a class="headerlink" href="#habilitar-la-extension-mbstring-y-reiniciar-apache" title="Permanent link">&para;</a></h3>
-<p>Ejecuta el comando para habilitar la extensión <code>mbstring</code>
-    <div class="highlight"><pre><span></span><code><span class="w">    </span>sudo<span class="w"> </span>phpenmod<span class="w"> </span>mbstring
-</code></pre></div></p>
-<p><img alt="Extensión mbstring" src="../image-35.png" /></p>
-<ul>
-<li>Reiniciar el servicio <code>Apache</code>
-    <div class="highlight"><pre><span></span><code><span class="w">    </span>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
+<li>Configurar <code>wp-config.php</code>
+Copiar y modificar el archivo de configuración:
+        <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>-u<span class="w"> </span>www-data<span class="w"> </span>cp<span class="w"> </span>/srv/www/wordpress/wp-config-sample.php<span class="w"> </span>/srv/www/wordpress/wp-config.php
+sudo<span class="w"> </span>-u<span class="w"> </span>www-data<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/database_name_here/wordpress/&#39;</span><span class="w"> </span>/srv/www/wordpress/wp-config.php
+sudo<span class="w"> </span>-u<span class="w"> </span>www-data<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/username_here/wordpress/&#39;</span><span class="w"> </span>/srv/www/wordpress/wp-config.php
+sudo<span class="w"> </span>-u<span class="w"> </span>www-data<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/password_here/tu-contraseña/&#39;</span><span class="w"> </span>/srv/www/wordpress/wp-config.php
 </code></pre></div></li>
 </ul>
-<h3 id="configurar-la-base-de-datos-para-phpmyadmin">Configurar la base de datos para phpMyAdmin<a class="headerlink" href="#configurar-la-base-de-datos-para-phpmyadmin" title="Permanent link">&para;</a></h3>
-<p>Durante la instalación de phpMyAdmin,pedirá que configuremos una <code>base de datos</code> para <code>phpMyAdmin</code> con <code>dbconfig-common</code>
-<img alt="dbconfig-common" src="../image-32.png" /></p>
-<ul>
-<li>Definimos la contraseña</li>
-</ul>
-<p><img alt="Contraseña phpadmin SQL" src="../image-33.png" /></p>
-<h2 id="configuracion-del-acceso-por-contrasena-para-la-cuenta-root-de-mysql">Configuración del Acceso por Contraseña para la Cuenta Root de MySQL<a class="headerlink" href="#configuracion-del-acceso-por-contrasena-para-la-cuenta-root-de-mysql" title="Permanent link">&para;</a></h2>
-<p>Iniciar sesión en MySQL como root
-    <div class="highlight"><pre><span></span><code><span class="w">    </span>sudo<span class="w"> </span>mysql
-</code></pre></div>
-Cambiar el método de autenticación a mysql_native_password:
-    <div class="highlight"><pre><span></span><code><span class="w">    </span>ALTER<span class="w"> </span>USER<span class="w"> </span><span class="s1">&#39;root&#39;</span>@<span class="s1">&#39;localhost&#39;</span><span class="w"> </span>IDENTIFIED<span class="w"> </span>WITH<span class="w"> </span>mysql_native_password<span class="w"> </span>BY<span class="w"> </span><span class="s1">&#39;Root_1234&#39;</span><span class="p">;</span>
-<span class="w">    </span>FLUSH<span class="w"> </span>PRIVILEGES<span class="p">;</span>
+<p>Revisar el archivo con <code>nano</code>:
+        <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>-u<span class="w"> </span>www-data<span class="w"> </span>nano<span class="w"> </span>/srv/www/wordpress/wp-config.php
 </code></pre></div></p>
-<p><img alt="USUARIO ROOT" src="../image-36.png" /></p>
-<p><img alt="FLUSH PRIVILEGES" src="../image-37.png" /></p>
-<p>Otorgar privilegios a ROOT
-    <div class="highlight"><pre><span></span><code><span class="w">    </span>GRANT<span class="w"> </span>ALL<span class="w"> </span>PRIVILEGES<span class="w"> </span>ON<span class="w"> </span>*.*<span class="w"> </span>TO<span class="w"> </span><span class="s1">&#39;root&#39;</span>@<span class="s1">&#39;localhost&#39;</span><span class="w"> </span>WITH<span class="w"> </span>GRANT<span class="w"> </span>OPTION<span class="p">;</span>
-<span class="w">    </span>FLUSH<span class="w"> </span>PRIVILEGES<span class="p">;</span>
-</code></pre></div></p>
-<p><img alt="CEDER PERMISOS A ROOT" src="../image-39.png" /></p>
-<ul>
-<li>Comprobar usuarios de MySQL</li>
-</ul>
-<p><img alt="Usuarios SQL" src="../image-38.png" /></p>
-<h2 id="configuracion-del-acceso-por-contrasena-para-un-usuario-dedicado-de-mysql">Configuración del Acceso por Contraseña para un Usuario Dedicado de MySQL<a class="headerlink" href="#configuracion-del-acceso-por-contrasena-para-un-usuario-dedicado-de-mysql" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p>Crear un nuevo usuario con una contraseña segura:
-    <div class="highlight"><pre><span></span><code><span class="w">    </span>CREATE<span class="w"> </span>USER<span class="w"> </span><span class="s1">&#39;phpmyadmin_max&#39;</span>@<span class="s1">&#39;localhost&#39;</span><span class="w"> </span>IDENTIFIED<span class="w"> </span>BY<span class="w"> </span><span class="s1">&#39;Root_1234&#39;</span><span class="p">;</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>Otorgar privilegios al nuevo usuario
-    <div class="highlight"><pre><span></span><code><span class="w">    </span>GRANT<span class="w"> </span>ALL<span class="w"> </span>PRIVILEGES<span class="w"> </span>ON<span class="w"> </span>*.*<span class="w"> </span>TO<span class="w"> </span><span class="s1">&#39;phpmyadmin_max&#39;</span>@<span class="s1">&#39;localhost&#39;</span><span class="w"> </span>WITH<span class="w"> </span>GRANT<span class="w"> </span>OPTION<span class="p">;</span>
-<span class="w">    </span>FLUSH<span class="w"> </span>PRIVILEGES<span class="p">;</span>
-</code></pre></div>
-<img alt="Creación usuario para php" src="../image-40.png" /></p>
-</li>
-<li>
-<p>Comprobar usuarios de MySQL</p>
-</li>
-</ul>
-<p><img alt="Usuarios MYSQL nuevos" src="../image-41.png" /></p>
-<h2 id="securizando-instancia-de-phpmyadmin">Securizando Instancia de phpMyAdmin<a class="headerlink" href="#securizando-instancia-de-phpmyadmin" title="Permanent link">&para;</a></h2>
-<p>Habilitar sobrescrituras de archivos <code>.htaccess</code> en <code>Apache</code>:</p>
-<ul>
-<li>Edita el archivo de configuración de <code>phpMyAdmin</code>:
-     <div class="highlight"><pre><span></span><code><span class="w">   </span>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/apache2/conf-available/phpmyadmin.conf
-</code></pre></div>
-Asegúrate de que la directiva <code>AllowOverride</code> está configurada en <code>All</code></li>
-</ul>
-<p><img alt="Override configurado" src="../image-42.png" /></p>
-<ul>
-<li>Crear un archivo .htaccess en el directorio de phpMyAdmin:
-     <div class="highlight"><pre><span></span><code><span class="w">   </span>sudo<span class="w"> </span>nano<span class="w"> </span>/usr/share/phpmyadmin/.htaccess
-</code></pre></div></li>
-</ul>
-<p><img alt="Archiv .htaccess" src="../image-43.png" /></p>
-<ul>
-<li>
-<p>Agrega las siguientes líneas para habilitar la autenticación básica</p>
-<div class="highlight"><pre><span></span><code><span class="w">   </span>AuthType<span class="w"> </span>Basic
-<span class="w">   </span>AuthName<span class="w"> </span><span class="s2">&quot;Acceso Restringido&quot;</span>
-<span class="w">   </span>AuthUserFile<span class="w"> </span>/etc/phpmyadmin/.htpasswd
-<span class="w">   </span>Require<span class="w"> </span>valid-user
-</code></pre></div>
-</li>
-</ul>
-<p><img alt="Configuración .htaccess" src="../image-44.png" /></p>
-<ul>
-<li>Crear un archivo .htpasswd para almacenar las credenciales
-     <div class="highlight"><pre><span></span><code><span class="w">   </span>sudo<span class="w"> </span>htpasswd<span class="w"> </span>-c<span class="w"> </span>/etc/phpmyadmin/.htpasswd<span class="w"> </span>phpmyadmin_max
-</code></pre></div>
-<img alt="Usuario configurado con contraseña" src="../image-45.png" /></li>
-</ul>
-<h2 id="comprobaciones">Comprobaciones<a class="headerlink" href="#comprobaciones" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Acceso a http://IP/phpmyadmin</li>
-</ul>
-<p><img alt="Primera verificación de seguridad" src="../image-46.png" /></p>
-<p><img alt="Segunda verificación de seguridad" src="../image-47.png" /></p>
+<h2 id="configuracion-final-de-wordpress">Configuración Final de WordPress<a class="headerlink" href="#configuracion-final-de-wordpress" title="Permanent link">&para;</a></h2>
+<h3 id="acceder-al-instalador-de-wordpress">Acceder al Instalador de WordPress<a class="headerlink" href="#acceder-al-instalador-de-wordpress" title="Permanent link">&para;</a></h3>
+<p>Abre un navegador y accede a <code>http://localhost</code> para completar la instalación de WordPress siguiendo los pasos en pantalla.</p>
+<h2 id="publicar-primer-post">Publicar Primer Post<a class="headerlink" href="#publicar-primer-post" title="Permanent link">&para;</a></h2>
 
 
 
