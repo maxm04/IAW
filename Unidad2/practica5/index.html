@@ -704,24 +704,57 @@ sudo<span class="w"> </span>reboot
 sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>apache2
 sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>apache2
 </code></pre></div></p>
-<p>Crear una Página de Muestra para cada Servidor: 
+<ul>
+<li>Servidor 1</li>
+</ul>
+<p><img alt="Apache2 Instalado en servidor 1" src="../image-48.png" /></p>
+<ul>
+<li>Servidor 2</li>
+</ul>
+<p><img alt="Apache2 Instalado en servidor 2" src="../image-49.png" /></p>
+<p>Crear una Página de Muestra para cada Servidor o modificamos el <code>index.html</code>: 
         <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/var/www/html/web1.html
-</code></pre></div></p>
-<p>Crear un Archivo de Configuración para cada Host Virtual:
-        <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/apache2/sites-available/web1.conf
 </code></pre></div>
-Añadimos el contenido en ambos servidores cambiando el <code>ServerName</code>:
+        <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/var/www/html/index.html
+</code></pre></div></p>
+<ul>
+<li>Servidor 1</li>
+</ul>
+<p><img alt="Modificación Index Servidor 1" src="../image-50.png" /></p>
+<ul>
+<li>Servidor 2</li>
+</ul>
+<p><img alt="Modificación Index Servidor 2" src="../image-51.png" /></p>
+<p>Crear un Archivo de Configuración de Host Virtual en cada sevidor:
+        <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>cp<span class="w"> </span>/etc/apache2/sites-available/000-default.conf<span class="w"> </span>/etc/apache2/sites-available/web1.conf
+</code></pre></div></p>
+<ul>
+<li>Servidor 1</li>
+</ul>
+<p><img alt="Host Virtual Web Servidor 1" src="../image-52.png" /></p>
+<ul>
+<li>Servidor 2</li>
+</ul>
+<p><img alt="Host Virtual Web Servidor 2" src="../image-53.png" /></p>
+<p>Añadimos el contenido en ambos servidores cambiando el <code>ServerName</code>:
 <div class="highlight"><pre><span></span><code><span class="nt">&lt;VirtualHost</span><span class="w"> </span><span class="s">*:80</span><span class="nt">&gt;</span>
 <span class="w">        </span><span class="nb">ServerName</span><span class="w"> </span>web1.iaw2425.com
 <span class="w">        </span><span class="nb">DocumentRoot</span><span class="w"> </span><span class="sx">/var/www/html</span>
-<span class="w">        </span><span class="nb">DirectoryIndex</span><span class="w"> </span>web1.html
+<span class="w">        </span><span class="nb">DirectoryIndex</span><span class="w"> </span>index.html
 <span class="nt">&lt;/VirtualHost&gt;</span>
 </code></pre></div>
-Guarda y cierra el archivo, luego habilítalo:
+- Servidor 1</p>
+<p><img alt="Configuración Host Virtual Servidor 1" src="../image-54.png" /></p>
+<ul>
+<li>Servidor 2</li>
+</ul>
+<p><img alt="Configuración Host Virtual Servidor 2" src="../image-55.png" /></p>
+<p>Guarda y cierra el archivo, luego habilítalo:
         <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2ensite<span class="w"> </span>web1.conf
 sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
 </code></pre></div>
 <em>Estos pasos se repiten en los dos servidores</em></p>
+<p><img alt="Habilitar Host Virtual" src="../image-56.png" /></p>
 <h2 id="configurar-el-servidor-balanceador-de-carga">Configurar el Servidor Balanceador de Carga<a class="headerlink" href="#configurar-el-servidor-balanceador-de-carga" title="Permanent link">&para;</a></h2>
 <p>Actualizar el Sistema y Configurar Apache: 
         <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span>-y<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
@@ -729,17 +762,20 @@ sudo<span class="w"> </span>reboot
 sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apache2<span class="w"> </span>-y
 sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>apache2
 sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>apache2
-</code></pre></div>
-Habilitar Módulos Necesarios para el Balanceo de Carga: 
+</code></pre></div></p>
+<p><img alt="Instalación Apache Servidor de Balanceo" src="../image-57.png" /></p>
+<p>Habilitar Módulos Necesarios para el Balanceo de Carga: 
         <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2enmod<span class="w"> </span>proxy<span class="w"> </span>proxy_http<span class="w"> </span>proxy_balancer<span class="w"> </span>lbmethod_byrequests
 sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
-</code></pre></div>
-Crear el Archivo de Configuración del Balanceador:
-        <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/apache2/sites-available/loadbalancer.conf
 </code></pre></div></p>
+<p><img alt="Instalación Módulos Apache para el balanceo de carga" src="../image-58.png" /></p>
+<p>Crear el Archivo de Configuración del Balanceador:
+        <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>cp<span class="w"> </span>/etc/apache2/sites-available/000-default.conf<span class="w"> </span>/etc/apache2/sites-available/balanceo.conf
+</code></pre></div></p>
+<p><img alt="Host Virtual Balanceo" src="../image-59.png" /></p>
 <p>Agrega el siguiente contenido:</p>
 <p><div class="highlight"><pre><span></span><code><span class="nt">&lt;VirtualHost</span><span class="w"> </span><span class="s">*:80</span><span class="nt">&gt;</span>
-<span class="w">    </span><span class="nb">ServerName</span><span class="w"> </span>balancer.iaw2425.com
+<span class="w">    </span><span class="nb">ServerName</span><span class="w"> </span>balanceo.iaw2425.com
 <span class="w">    </span><span class="nt">&lt;Proxy</span><span class="w"> </span><span class="s">balancer://webserver</span><span class="nt">&gt;</span>
 <span class="w">        </span><span class="c"># Servidor 1</span>
 <span class="w">        </span><span class="nb">BalancerMember</span><span class="w"> </span>http://web1.iaw2425.com
@@ -752,7 +788,9 @@ Crear el Archivo de Configuración del Balanceador:
 <span class="w">    </span><span class="nb">ProxyPassReverse</span><span class="w"> </span>/<span class="w"> </span>balancer://webserver/
 <span class="nt">&lt;/VirtualHost&gt;</span>
 </code></pre></div>
-Habilitar el Balanceador y Reiniciar Apache:
+<img alt="Dominio VirtualHost" src="../image-60.png" /></p>
+<p><img alt="Configuración Balanceo de carga" src="../image-61.png" /></p>
+<p>Habilitar el Balanceador y Reiniciar Apache:
         <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2ensite<span class="w"> </span>loadbalancer.conf
 sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
 </code></pre></div></p>
@@ -763,13 +801,20 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class=
 Agregamos lo siguiente:</p>
 <div class="highlight"><pre><span></span><code>192.168.1.X web1.iaw2425.com
 192.168.1.Y web2.iaw2425.com
-192.168.1.Z balancer.iaw2425.com
+192.168.1.Z balanceo.iaw2425.com
 </code></pre></div>
 <ul>
 <li>Reemplaza 192.168.1.X/Y/Z por las IPs correspondientes de Servidor1, Servidor2 y Balanceador</li>
 </ul>
+<p><img alt="Archivo Hosts" src="../image-62.png" /></p>
 <h2 id="comprobacion-del-balanceo-de-carga">Comprobación del Balanceo de Carga<a class="headerlink" href="#comprobacion-del-balanceo-de-carga" title="Permanent link">&para;</a></h2>
-<p>Acceder al Balanceador: Abre un navegador en cualquier equipo y accede a la URL <code>http://balancer.iaw2425.com</code>. </p>
+<p>Acceder al Balanceador: Abrimos el navegador y accedemos a la URL <code>http://balanceo.iaw2425.com</code>. </p>
+<p><img alt="Comprobacion balanceo de carga 1" src="../image-63.png" /></p>
+<ul>
+<li>Refrescamos la página web</li>
+</ul>
+<p><img alt="Comprobacion balanceo de carga 2" src="../image-64.png" /></p>
+<p>Al refrescar la web vemos que va cambiando de contenido.</p>
 
 
 
