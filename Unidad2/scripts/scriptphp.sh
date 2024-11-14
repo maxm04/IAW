@@ -8,7 +8,7 @@ sudo apt install php-cgi -y
 sudo apt install php-mysql -y
 sudo apt install php-pgsql -y
 
-n
+
 sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl -y    
 
 
